@@ -1,0 +1,51 @@
+{% extends "login_header.html" %}
+{% load static %}
+
+{% block content %}
+
+<!-- Login form -->
+
+<h1 class="text-center text-danger border border-2
+            rounded border-white w-50 mx-auto">LOGIN BELOW</h1>
+
+<div class="row">
+    <div class=" justify-content-center d-flex mx-auto">
+        <div class="p-1 m-1">
+            <img src="{% static "my_assets/spy_infiltration.png" %}"
+                class="img-fluid rounded"
+                alt="Infiltrator"
+                width="325px">
+        </div>
+        <div class="justify-content p-3 border border-2 rounded border-danger m-1">
+            <form class="text-white"
+                action="{% url "user_auth:login_user" %}"
+                method="post">
+                {% csrf_token %}
+
+                <label><b>Username</b></label>
+                <input type="text" name="username" required>
+                <br><br>
+                    
+                <label><b>Password</b></label>
+                <input type="password" name="password" required>
+                <br><br>
+                    
+                <input class="btn btn-danger" type="submit" value="Login">
+            </form>
+            {% if error %}
+            <p class="text-danger">{{error}}</p>
+            {% endif %}
+            <section class="text-white py-3">
+                <b>New here?</b><br>
+                <a class="btn btn-danger"
+                    href="{% url "user_reg:register_user" %}">
+                    Create a profile now
+                </a>
+            </section>
+        </div>
+    </div>
+</div>
+
+<!-- Images generated from ChatGPT: https://chatgpt.com/ -->
+
+{% endblock %}
