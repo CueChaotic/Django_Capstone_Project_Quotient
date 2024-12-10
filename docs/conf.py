@@ -1,5 +1,15 @@
+# Module imports
+
+import os
+import sys
+import django
+
+sys.path.insert(0, os.path.abspath('..'))
+os.environ['DJANGO_SETTINGS_MODULE'] = 'ProjectQuotient.settings'
+django.setup()
+
 # Configuration file for the Sphinx documentation builder.
-#
+
 # For the full list of built-in configuration values, see the documentation:
 # https://www.sphinx-doc.org/en/master/usage/configuration.html
 
@@ -21,8 +31,6 @@ extensions = ["sphinx.ext.autodoc",
 
 templates_path = ['_templates']
 exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
-
-
 
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
