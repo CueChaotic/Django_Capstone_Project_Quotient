@@ -34,6 +34,7 @@ class Forum(models.Model):
         """
         return str(self.topic)
 
+
 class Discussion(models.Model):
     """
     The Discussion model encapsulates data for the discussion within the
