@@ -1,14 +1,6 @@
 forum package
 =============
 
-Subpackages
------------
-
-.. toctree::
-   :maxdepth: 4
-
-   forum.migrations
-
 Submodules
 ----------
 
@@ -16,14 +8,6 @@ forum.admin module
 ------------------
 
 .. automodule:: forum.admin
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-forum.apps module
------------------
-
-.. automodule:: forum.apps
    :members:
    :undoc-members:
    :show-inheritance:
@@ -40,14 +24,6 @@ forum.models module
 -------------------
 
 .. automodule:: forum.models
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-forum.tests module
-------------------
-
-.. automodule:: forum.tests
    :members:
    :undoc-members:
    :show-inheritance:
