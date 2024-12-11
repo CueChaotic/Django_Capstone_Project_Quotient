@@ -11,3 +11,4 @@ Django Capstone - Project Quotient documentation
    :maxdepth: 2
    :caption: Contents:
 
+   modules
