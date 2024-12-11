@@ -27,4 +27,3 @@ urlpatterns = [
     path('forum/', include('forum.urls')),
     path('store/', include('store.urls')),
 ]
-
