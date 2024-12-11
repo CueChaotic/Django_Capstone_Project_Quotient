@@ -4,8 +4,7 @@ from django.contrib.auth.models import User
 # My models
 
 class Forum(models.Model):
-    """
-    The Forum model encapsulates the data for the forum. Forum topics will
+    """The Forum model encapsulates the data for the forum. Forum topics will
     remain even if users are deleted, for archival purposes.
 
     :param models.Model: Django model that is used to create a model from a
@@ -26,8 +25,7 @@ class Forum(models.Model):
     date_created = models.DateTimeField(auto_now_add = True, null = True)
     
     def __str__(self):
-        """
-        Returns the string representation of the forum, which is the topic.
+        """Returns the string representation of the forum, which is the topic.
 
         :return: The topic of the forum.
         :rtype: str
@@ -36,8 +34,7 @@ class Forum(models.Model):
 
 
 class Discussion(models.Model):
-    """
-    The Discussion model encapsulates data for the discussion within the
+    """The Discussion model encapsulates data for the discussion within the
     forum. Discussions will remain even if users are deleted, for archival
     purposes.
 
@@ -55,8 +52,7 @@ class Discussion(models.Model):
     discuss = models.CharField(max_length = 1000)
  
     def __str__(self):
-        """
-        Returns the string value of the discussion, being the forum it belongs
+        """Returns the string value of the discussion, being the forum it belongs
         to.
 
         :return: The forum of the discussion.

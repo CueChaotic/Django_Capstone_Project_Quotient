@@ -3,8 +3,7 @@ from .models import *
 
 # Forum and Discussion forms:
 class CreateInForum(ModelForm):
-    """
-    Form that pulls in the Forum model and excludes the user field in the Meta
+    """Form that pulls in the Forum model and excludes the user field in the Meta
     class.
 
     :param ModelForm: Django form that is used to create a form from a model.
@@ -14,8 +13,7 @@ class CreateInForum(ModelForm):
         exclude = ["user"]
  
 class CreateInDiscussion(ModelForm):
-    """
-    Form that pulls in the Discussion model and excludes the user field in the
+    """Form that pulls in the Discussion model and excludes the user field in the
     Meta class.
 
     :param ModelForm: Django form that is used to create a form from a model.

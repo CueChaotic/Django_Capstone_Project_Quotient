@@ -2,8 +2,7 @@ from django.urls import path
 from . import views
 
 app_name = "user_auth"
-"""
-App name. Used for easy referencing in templates.
+"""App name. Used for easy referencing in templates.
 """
 
 urlpatterns = [
@@ -13,8 +12,7 @@ urlpatterns = [
     path("logout/", views.logout_user, name = "logout"),
     path("logout_success/", views.logged_out, name = "logout_success"),
 ]
-"""
-URLs for the user authorisation app.
+"""URLs for the user authorisation app.
 The first path displays the initial login page.
 The second path is the user authentication function.
 The third path displays a success page on login.

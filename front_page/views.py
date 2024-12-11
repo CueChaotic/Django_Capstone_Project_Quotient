@@ -2,8 +2,7 @@ from django.shortcuts import render
 
 # All views
 def front_page(request):
-    """
-    Renders the front (home) page.
+    """Renders the front (home) page.
 
     :param request: The request object.
     :param template_name: The name of the template to render.

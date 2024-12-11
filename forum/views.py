@@ -5,8 +5,7 @@ from .forms import *
 
 # All views
 def forum_page(request):
-    """
-    Collects FORUM and related DISCUSSION object data and renders it to the
+    """Collects FORUM and related DISCUSSION object data and renders it to the
     forum_page.html template.
 
     :param request: The request object sent to the server.
@@ -30,8 +29,7 @@ def forum_page(request):
 
 @login_required(login_url="/user_auth")
 def addInForum(request):
-    """
-    Restricted view to add a forum topic, using the CreateInForum form and
+    """Restricted view to add a forum topic, using the CreateInForum form and
     rendered in the addInForum.html template.
 
     :param request: The request object sent to the server.
@@ -57,8 +55,7 @@ def addInForum(request):
 
 @login_required(login_url="/user_auth")
 def addInDiscussion(request):
-    """
-    Restricted view to add a discussion to a forum topic, using the
+    """Restricted view to add a discussion to a forum topic, using the
     CreateInDiscussion form and rendered in the addInDiscussion.html template.
 
     :param request: The request object sent to the server.
