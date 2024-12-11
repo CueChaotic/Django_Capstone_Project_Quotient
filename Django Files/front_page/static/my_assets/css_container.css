@@ -1,0 +1,25 @@
+/* CSS Stylesheet for Project/Quotient website */
+
+/* ===== General Styles ===== */
+
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+    'Lucida Sans', Arial, sans-serif;
+    text-align: justify;
+    padding-top: 180px;
+}
+
+nav {
+    border:2px solid rgb(212, 0, 0);
+}
+
+h1 {
+    padding-top: 10px;
+    padding-bottom:10px;
+}
+
+p {
+    margin: 50px;
+    font-size: 20px;
+}
+

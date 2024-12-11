@@ -1,0 +1,61 @@
+{% extends "forum_header.html" %}
+{% load static %}
+
+{% block content %}
+
+<!-- Forum page content -->
+
+<h1 class="text-center text-danger border border-2
+rounded border-white w-50 mx-auto">DISCUSSION FORUM</h1>
+
+<h2 class="text-danger text-center my-3">
+    Currently active forums: {{count}}
+    <form method="POST" action="{% url 'disc_forum:addInForum' %}">
+        {% csrf_token %}
+    <button class="btn btn-danger fw-bold m-4">
+            Start a thread
+    </button>
+    </form>
+</h2>
+
+<!-- Display all forums -->
+
+{%for forum in forums %}
+    <div class="row">
+        <div class="container w-50 bg-light rounded border border-2
+        border-danger p-2 m-2 mx-auto">
+            <div class="shadow p-3 mb-5 bg-white rounded m-2">
+                <h3 class="my-2"><b>{{forum.topic}}</b></h3>
+                <hr>
+                <p>{{forum.description}}</p>
+                <p><i> From: {{forum.user}}</i></p>
+            </div>
+            <div class="shadow p-3 mb-5 bg-white rounded m-2">
+                <h4>Other user comments</h4>
+                <hr>
+                {%for discuss in discussions%}
+                    {%for objs in discuss%}
+                        {% if objs.forum == forum %}
+                        {{objs.discuss}}
+                        <br>
+                        {% endif %}
+                    {%endfor%}
+                {%endfor%}
+            </div>
+            <form method="POST"
+                action="{% url 'disc_forum:addInDiscussion' %}">
+                {% csrf_token %}
+                <button class="btn btn-danger fw-bold m-2">
+                    Comment
+                </button>
+            </form>
+        </div>
+    </div>
+{%endfor%}
+
+{% endblock %}
+
+<!-- NOTE: Above code to build a discussion forum sourced (before changes) from
+DataFlair:
+https://data-flair.training/blogs/discussion-forum-python-django/ -->
+
