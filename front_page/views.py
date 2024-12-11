@@ -8,6 +8,6 @@ def front_page(request):
     :param request: The request object.
     :param template_name: The name of the template to render.
 
-    :return: The rendered template.
+    :return: The rendered front page template.
     """
     return render(request, 'front_page.html')
