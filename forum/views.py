@@ -9,11 +9,8 @@ def forum_page(request):
     forum_page.html template.
 
     :param request: The request object sent to the server.
-
     :param forums: Grabs all the Forum objects in the database.
-
     :param count: Counts the number of Forum objects.
-    
     :param discussions: Initial empty list to store all the Discussion objects
         sitting in each Forum object.
 
@@ -36,12 +33,9 @@ def addInForum(request):
     rendered in the addInForum.html template.
 
     :param request: The request object sent to the server.
-
     :param form: The CreateInForum form pulled from forms.py. Form request
         method is checked and form is saved if valid.
-
     :param forum_instance: The instance of the forum object created.
-
     :param context: The context dictionary to be rendered in the template.
 
     :return: The addInForum.html template with the context.
@@ -65,13 +59,10 @@ def addInDiscussion(request):
     CreateInDiscussion form and rendered in the addInDiscussion.html template.
 
     :param request: The request object sent to the server.
-
-    :param form : The CreateInDiscussion form pulled from forms.py. The form
+    :param form: The CreateInDiscussion form pulled from forms.py. The form
         request method is checked and form is saved if valid.
-
     :param discussion_instance: The instance of the discussion object that is
         created.
-
     :param context: The context dictionary to be rendered in the template.
 
     :return: The addInDiscussion.html template with the context.

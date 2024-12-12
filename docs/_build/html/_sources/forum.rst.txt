@@ -4,8 +4,8 @@ forum package
 Submodules
 ----------
 
-forum.forms module
-------------------
+Forum forms.py module
+---------------------
 
 .. automodule:: forum.forms
    :members:
