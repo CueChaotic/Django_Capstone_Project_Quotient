@@ -25,11 +25,12 @@ SECRET_KEY = 'django-insecure-6e@*8exkm3#&a1xewe%@mws0c0#28_lysysbgd!mu--5rcy@%x
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
-
+ALLOWED_HOSTS = [
+    'localhost',
+    'ip172-18-0-39-ctde29i91nsg00a5r3kg-8000.direct.labs.play-with-docker.com'
+]
 
 # Application definition
-
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
