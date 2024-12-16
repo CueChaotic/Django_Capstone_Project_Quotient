@@ -17,19 +17,23 @@ BUT, that being said, who knows what the future holds?
 
 ## Feature overview
 
-The current build has the following very surface-level features built using Django:
+The current build has the following features built using Django:
 * Landing page, with a brief introduction to the "company".
-* New user registration
-* User login and authentication (Username and Password)
-* Forum where users may post new discussion topics are add commentary to existing topics.
-* A non-functional store page Working links to all of the above
+* Functional new user registration.
+* Functional user login and authentication (Username and Password).
+* Functional forum where users may post new discussion topics are add commentary to existing topics.
+* A non-functional store page.
+* Working links to all of the above.
 
 NOTE: All the imagery is AI-generated (including the logo), massive thanks to ChatGPT for all its
 hard work in that respect, you made me proud.
 
 ## Installation
 
-No installation required. See *Usage* below
+ **1. Building the site**
+   1.1 
+   1.2 wadawd
+   1.3 
 
 ## Usage
 
