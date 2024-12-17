@@ -33,62 +33,80 @@ hard work in that respect, you made me proud.
    ### 2.1 Building the site and just running the build in a virtual environment
    
       2.1.1 Open the Command Terminal relevant to your operating system and navigate to the directory
-      you would like to use for the project files.
+            you would like to use for the project files.
+
       2.1.2 Clone this Git repository to your chosen local directory by running this command in your
-      terminal: git clone https://github.com/CueChaotic/Django_Capstone_Project_Quotient.git
-      2.1.3 A new directory called Django_Capstone_Project_Quotient should now appear within your current
-      directory. Navigate into this new folder in your terminal.
+            terminal:
+            > git clone https://github.com/CueChaotic/Django_Capstone_Project_Quotient.git
+
+      2.1.3 A new directory called Django_Capstone_Project_Quotient should now appear within your
+            current directory. Navigate into this new folder in your terminal.
+
       2.1.4 While in Django_Capstone_Project_Quotient, run the following command in your terminal:
-      pip install -r requirements.txt
-      This will check for, download and install the programs required to build the site.
+            > pip install -r requirements.txt
+            This will check for, download and install the programs required to build the site.
+
       2.1.5 Next, we will create a virtual environment which will typically be used when building the
-      website. Make sure you are still in the parent directory of the project (being
-      Django_Capstone_Project_Quotient). Then run the following command in your terminal:
-      python -m venv myenv
-      This will create a Virtual Environment called "myenv" but you can name this environment whatever
-      you prefer.
+            website. Make sure you are still in the parent directory of the project (being
+            Django_Capstone_Project_Quotient). Then run the following command in your terminal:
+            > python -m venv myenv
+            This will create a Virtual Environment called "myenv" but you can name this environment
+            whatever you prefer.
+
       2.1.6 Activate the Virtual Environment:
-      * In Windows run: myenv\Scripts\activate
-      * In Mac/Linux, run: source myenv/bin/activate
+            * In Windows run: myenv\Scripts\activate
+            * In Mac/Linux, run: source myenv/bin/activate
+
       2.1.7 Run the following command to complete migrations (needed to run the Forum functionality):
-      python manage.py migrate
+            > python manage.py migrate
+
       2.1.8 To run the site in Django, run the following command: python manage.py runserver
-      This will give you a link to the site that can be opened in your web browser. VOILA!
-      To shut the local site server in your terminal, press Control + C.
-      2.1.9 Deactivate your Virtual Environment by running: deactivate
+            This will give you a link to the site that can be opened in your web browser. VOILA!
+            To shut the local server in your terminal, press Control + C.
+
+      2.1.9 Deactivate your Virtual Environment by running:
+            > deactivate
       
    ### 2.2 Running the site with a Docker image
 
-      2.2.1 Complete steps 1 through 9 above.
+      2.2.1 Complete steps 1 through 9 in 2.1 above.
+
       2.2.2 Create an account (if you don't have one already) on Docker here:
-      https://app.docker.com/
-      2.2.3 Download the Docker Desktop App and install it. Ensure it is up and running in the background.
-      2.2.4 In your terminal, ensure you are in the parent (root) directory of the website project, being:
-      Django_Capstone_Project_Quotient
+            > https://app.docker.com/
+
+      2.2.3 Download the Docker Desktop App and install it. Ensure it is up and running in the
+            background.
+
+      2.2.4 In your terminal, ensure you are in the parent (root) directory of the website project,
+            namely: Django_Capstone_Project_Quotient
+
       2.2.5 Run the below command to check that your Docker is working as intended:
-      docker run hello-world
-      There should be a success message.
-      2.2.6 In the root directory, you will see a Dockerfile (no extension). This Dockerfile is used to
-      give instructions to Docker as to how and what to run when all the files are held in a Docker image.
+            > docker run hello-world
+            There should be a success message.
+
+      2.2.6 In the root directory, you will see a Dockerfile (no extension). This Dockerfile is
+            used to give instructions to Docker as to how and what to run when all the files are
+            held in a Docker image.
+
       2.2.7 Run the following command to create a Docker image from the project files:
-      docker build -t project_site ./
-      "project_site" is the name of the docker image we're creating. You may use any name you wish however.
+            > docker build -t project_site ./
+            "project_site" is the name of the docker image we're creating. You may use any name you
+            wish however.
+
       2.2.8 Run the following command to run the image container:
-      docker run -p 8000:8000 project_site
-      There will be an http://localhost link that you can use to open the site in a web browser. VOILA!
-      You should now be able to browse the site.
+            > docker run -p 8000:8000 project_site
+            There will be an http://localhost link that you can use to open the site in a web browser.
+            VOILA! You should now be able to browse the site.
+
       2.2.9 To use the terminal again, press Ctrl + C 3 times to force exit.
+
       2.2.10 Run the below command to list active containers:
-      docker ps
-      Take note of the container ID.
+            > docker ps
+            Take note of the container ID.
+
       2.2.11 Run the below command to stop the container.
-      docker stop <container ID>
-      Replace <container ID> with the actual container ID you want to stop.
-      
-      
-      
-      
-   
+            > docker stop <container ID>
+            Replace <container ID> with the actual container ID you want to stop.
 
 ## 3. Usage
 
