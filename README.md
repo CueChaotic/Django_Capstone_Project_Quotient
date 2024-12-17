@@ -60,8 +60,10 @@ hard work in that respect, you made me proud.
       2.1.7 Run the following command to complete migrations (needed to run the Forum functionality):
             > python manage.py migrate
 
-      2.1.8 To run the site in Django, run the following command: python manage.py runserver
-            This will give you a link to the site that can be opened in your web browser. VOILA!
+      2.1.8 To run the site in Django, run the following command:
+            > python manage.py runserver
+            This will give you a link to the site that can be opened in your web browser.
+            VOILA! You should now be able to browse the site.
             To shut the local server in your terminal, press Control + C.
 
       2.1.9 Deactivate your Virtual Environment by running:
@@ -107,6 +109,47 @@ hard work in that respect, you made me proud.
       2.2.11 Run the below command to stop the container.
             > docker stop <container ID>
             Replace <container ID> with the actual container ID you want to stop.
+
+   ### 2.3 Pushing an image to your online Docker Hub repository
+
+      2.3.1 Complete steps 1 through 11 in 2.2 above.
+
+      2.3.2 Log in to the Docker website, navigate to Docker Hub, then navigate to the Repositories
+            tab.
+
+      2.3.3 Select the "Create a repository" button. Give the repository a name, such as project_site in
+            this case.
+
+      2.3.4 You will need to rename your local image file to be consistent with the online repository.
+            To do so, run the below command:
+            > docker tag project_site <your Docker username>/project_site
+            This changes the name of the image from project_site to <your Docker username>/project_site
+
+      2.3.5 You will need to login to Docker from your terminal before you can push to your online repo:
+            Run the command below:
+            > docker login
+            You will be prompted to input your login details.
+
+      2.3.6 Finally, you can now upload (i.e. "push") your image to your Docker Hub repo:
+            > docker push <your Docker username>/project_site
+            Check the above repo in Docker Hub and the image should be there once finished uploading!
+
+   ### 2.4 Pulling an existing image from a Docker repo
+
+      2.4.1 You can also pull a Docker image from an existing repo. To see an example of an image
+            completed and uploaded from the process above, navigate to:
+            https://hub.docker.com/r/cuechaotic/project_site
+
+      2.4.2 Run the Docker login command again in your terminal and input your login details as
+            prompted.
+
+      2.4.3 You will see a docker pull command in the above repo that you can copy and paste into your
+            terminal. Do so and run the command:
+            docker pull cuechaotic/project_site
+
+      2.4.4 Run the Docker and see what the site should look like!
+            > docker run -p 8000:8000 cuechaotic/project_site
+            Now try this with the image in your own repository.
 
 ## 3. Usage
 
