@@ -21,7 +21,7 @@ The current build has the following features built using Django:
 * Landing page, with a brief introduction to the "company".
 * Functional new user registration.
 * Functional user login and authentication (Username and Password).
-* Functional forum where users may post new discussion topics are add commentary to existing topics.
+* Functional forum where users may post new discussion topics and add commentary to existing topics.
 * A non-functional store page.
 * Working links to all of the above.
 
