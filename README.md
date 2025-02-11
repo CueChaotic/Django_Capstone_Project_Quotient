@@ -37,9 +37,7 @@ hard work in that respect, you made me proud.
 
       2.1.2 Clone this Git repository to your chosen local directory by running this command in your
             terminal:
-            ```
-            git clone https://github.com/CueChaotic/Django_Capstone_Project_Quotient.git
-            ```
+            > git clone https://github.com/CueChaotic/Django_Capstone_Project_Quotient.git
 
       2.1.3 A new directory called Django_Capstone_Project_Quotient should now appear within your
             current directory. Navigate into this new folder in your terminal.
